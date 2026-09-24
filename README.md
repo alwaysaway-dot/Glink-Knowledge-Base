@@ -1,6 +1,6 @@
 # Guanlan / 观澜
 
-[简体中文](README.zh-CN.md) · [Architecture and workflow](docs/architecture.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+[简体中文](README.zh-CN.md) · [Use cases & practical guide](docs/use-cases.md) · [Architecture and workflow](docs/architecture.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
 Guanlan is an evidence-grounded, human-approved knowledge workflow for an Obsidian-compatible Markdown Vault. It separates source facts from AI-derived knowledge candidates: **capture → organize → review → publish → curate relations**. A fixture-based local demo is included; it is **not** a live AI generation or live web capture demonstration.
 
