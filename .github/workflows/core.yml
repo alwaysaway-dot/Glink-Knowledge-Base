@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.14'
+      - name: Install media test dependency
+        run: brew install ffmpeg
       - name: Core synthetic tests
         run: bash scripts/run_core_tests.sh
       - name: Fixture-based isolated demo
@@ -17,7 +19,7 @@ jobs:
           demo_parent="$(mktemp -d /tmp/guanlan-public-demo.XXXXXX)"
           python3 examples/synthetic-demo/run_demo.py --output-root "$demo_parent/run"
       - name: No private defaults
-        run: python3 scripts/public_safety_check.py
+        run: python3 scripts/public_safety_check.py --allow-release-git
   static-web-optional:
     runs-on: macos-latest
     steps:

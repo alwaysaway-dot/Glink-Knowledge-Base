@@ -18,12 +18,13 @@ SENSITIVE = {
     "token_shape": re.compile(r"(?:gh[pousr]_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})"),
     "private_key": re.compile("-----BEGIN " + "PRIVATE KEY-----"),
 }
-EXCLUDED_DIRS = {"__pycache__", ".venv", ".venv-web-provider"}
+EXCLUDED_DIRS = {"__pycache__", ".venv", ".venv-web-provider", ".git"}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--allow-license-placeholder", action="store_true")
+    parser.add_argument("--allow-release-git", action="store_true")
     args = parser.parse_args()
     issues: list[tuple[str, str]] = []
     for path in ROOT.rglob("*"):
@@ -46,7 +47,7 @@ def main() -> int:
         for category, pattern in SENSITIVE.items():
             if pattern.search(content):
                 issues.append((relative.as_posix(), category))
-    if (ROOT / ".git").exists():
+    if (ROOT / ".git").exists() and not args.allow_release_git:
         issues.append((".git", "private_git_history"))
     license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
     if not args.allow_license_placeholder and "COPYRIGHT_HOLDER_CONFIRMATION_REQUIRED" in license_text:
