@@ -1,0 +1,52 @@
+{
+  "protocol": "guanlan-active-runtime-contract-manifest-v1",
+  "schema_version": "1.0.0",
+  "active_modules": [
+    "operation_envelope/operation_envelope.py",
+    "capture-provider-router/source_router.py",
+    "capture-provider-router/generic_web_capture.py",
+    "capture-provider-router/providers/scrapling_static_adapter.py",
+    "knowledge-foundation-stability/foundation_stability.py",
+    "source-material-generator/capture_projection_validator.py",
+    "source-material-generator/promote_readable_original_revision.py",
+    "knowledge-ingestion-manager/source_asset_ingestion.py",
+    "knowledge-ingestion-manager/learning_publish.py",
+    "knowledge-ingestion-manager/publisher_core.py",
+    "transcript-provider-bridge/media_transcript_pipeline.py",
+    "transcript-quality-gate/media_transcript_quality.py",
+    "knowledge-relation-manager/relation_curation.py"
+  ],
+  "active_protocols": [
+    "core/protocol/capture-production-boundary-v1.md",
+    "core/protocol/generic-web-capture-provider-v1.md",
+    "core/protocol/source-material-v3.md",
+    "core/protocol/asset-identity-v1.md",
+    "core/protocol/reference-stability-v1.md",
+    "core/protocol/source-promotion-v1.md",
+    "core/protocol/source-asset-ingestion-v1.md",
+    "core/protocol/knowledge-ingestion-v1.md",
+    "core/protocol/original-publish-receipt-v1.md",
+    "core/protocol/transcript-protocol-v1.md",
+    "core/protocol/transcript-quality-gate-v1.md",
+    "core/protocol/relation-registry-v1.md"
+  ],
+  "active_contract_tests": [
+    "tests/capture-provider-router/run-router-contracts.sh",
+    "tests/knowledge-foundation-stability/run-validation.sh",
+    "tests/source-promotion-atomicity/run_atomicity_tests.py",
+    "tests/media-transcript-quality-gate/test_media_transcript_quality.py",
+    "tests/multi-asset-workflow/run_multi_asset_workflow.py",
+    "tests/learning-note-generation-v2/test_learning_note_generation_v2.py",
+    "tests/knowledge-relation/test_relation_curation.py"
+  ],
+  "legacy_exclusions": [
+    {
+      "path": "transcript-normalizer/TranscriptNormalizer.swift",
+      "reason": "historical normalizer retained; active transcript quality pipeline is Python"
+    },
+    {
+      "path": "knowledge-retrieval-indexer/KnowledgeRetrievalIndexer.swift",
+      "reason": "historical retrieval runtime retained; retrieval is outside the production capture/publish chain"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "protocol": "transcript-provider-v1",
+  "provider": "funasr",
+  "model": "paraformer-zh",
+  "status": "completed",
+  "text": "Transcript unavailable",
+  "segments": [
+    {
+      "segment_id": "transcript-0001",
+      "start_time": 0,
+      "end_time": 1071.535,
+      "text": "Transcript unavailable"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+# Runtime and language caches
+**/__pycache__/
+*.py[cod]
+*.swiftdoc
+*.swiftmodule
+*.swiftsourceinfo
+.build/
+build/
+DerivedData/
+*.o
+*.pcm
+
+# Binaries, media, models and provider caches
+*.m4a
+*.mp3
+*.mp4
+*.mov
+*.wav
+*.webm
+*.bin
+*.model
+*.onnx
+*.safetensors
+**/models/
+**/cache/
+**/.cache/
+parse-agent-runner/agent-reach-runner
+media-inspector/media-inspector
+parse-router/parse-router
+subtitle-cleaner/subtitle-cleaner
+
+# Runtime output and historical large content objects
+asset-library/objects/
+asset-library/quarantine/**/*.md
+asset-library/quarantine/**/*.bin
+# The whole runtime asset library is hash-governed by the external freeze manifest.
+asset-library/
+**/output/
+**/outputs/
+**/tmp/
+*.log
+.DS_Store
+
+# Secrets and private runtime configuration
+.env
+.env.*
+!.env.example
+*credential*
+*secret*
+*token*
+core/config/transcript-provider-config.json
+
+# Local IDE / Obsidian runtime state
+.idea/
+.vscode/
+.obsidian/workspace*.json
+
+# Historical Phase reports and inactive MVP modules are preserved locally but are
+# intentionally outside the production freeze tree.
+/*报告.md
+/Phase*.md
+maintenance/*.md
+experiments/
+domain-adaptation-manager/
+full-video-understanding/
+guanlan-inbox-adapter/
+knowledge-asset-builder/
+knowledge-feedback-manager/
+knowledge-generation-manager/
+knowledge-lifecycle-manager/
+knowledge-quality-evaluator/
+knowledge-retrieval-indexer/
+material-package-builder/
+material-review-manager/
+multimodal-semantic-fusion/
+multimodal-transcript-recovery/
+ocr-mvp-validator/
+parse-agent-bridge/
+parse-full-pipeline/
+parse-pipeline/
+parse-task-creator/
+parse-task-manager-v2/
+parse-task-manager/
+semantic-query-expander/
+semantic-transcript-reconstruction/
+transcript-normalizer/
+transcript-reconstruction/
+usage-tracking-manager/
+video-understanding-core/
+visual-context-layer/
+workflow-validation-manager/

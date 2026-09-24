@@ -1,0 +1,13 @@
+{
+  "fixture_id": "synthetic-long-video-threshold-regression",
+  "classification": "fixture_regression",
+  "title": "合成长视频来源",
+  "source_type": "video",
+  "expected_duration_seconds": 3589,
+  "expected_segment_count": 12,
+  "historical_minimum_readable_chars": 20000,
+  "fixture_kind": "synthetic_deterministic",
+  "synthetic_paragraph_count": 600,
+  "synthetic_sentence": "本段为完全人工构造的确定性回归文字，仅用于检查旧阈值不进入生产规则。",
+  "purpose": "检查旧成功案例仍可通过通用 Source Promotion，固定数值不成为生产规则。"
+}

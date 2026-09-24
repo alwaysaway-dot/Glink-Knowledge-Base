@@ -1,0 +1,6 @@
+{
+  "provider": "funasr",
+  "python_path": "/absolute/path/to/external/funasr/.venv/bin/python",
+  "model": "paraformer-zh",
+  "enabled": true
+}

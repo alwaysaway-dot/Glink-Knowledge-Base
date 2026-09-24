@@ -1,0 +1,31 @@
+name: Synthetic core contracts
+on:
+  push:
+  pull_request:
+jobs:
+  core:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Core synthetic tests
+        run: bash scripts/run_core_tests.sh
+      - name: Fixture-based isolated demo
+        run: |
+          demo_parent="$(mktemp -d /tmp/guanlan-public-demo.XXXXXX)"
+          python3 examples/synthetic-demo/run_demo.py --output-root "$demo_parent/run"
+      - name: No private defaults
+        run: python3 scripts/public_safety_check.py
+  static-web-optional:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Install isolated static web provider dependency
+        run: python3 -m pip install -r capture-provider-router/requirements-static-web.txt
+      - name: Local synthetic HTTP integration
+        run: bash tests/generic-web-capture/run-tests.sh

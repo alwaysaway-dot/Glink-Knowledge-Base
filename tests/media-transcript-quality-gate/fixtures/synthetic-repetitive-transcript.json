@@ -1,0 +1,15 @@
+{
+  "protocol": "transcript-provider-v1",
+  "provider": "funasr",
+  "model": "paraformer-zh",
+  "status": "completed",
+  "text": "合成片段合成片段重复词重复词示例语句示例语句合成片段合成片段重复词重复词",
+  "segments": [
+    {
+      "segment_id": "transcript-0001",
+      "start_time": 0.21,
+      "end_time": 301.575,
+      "text": "合成片段合成片段重复词重复词示例语句示例语句合成片段合成片段重复词重复词"
+    }
+  ]
+}
