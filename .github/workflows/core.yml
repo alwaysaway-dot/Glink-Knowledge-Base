@@ -11,7 +11,7 @@ jobs:
         with:
           python-version: '3.14'
       - name: Install media test dependency
-        run: brew install ffmpeg
+        run: brew install ffmpeg ripgrep
       - name: Core synthetic tests
         run: bash scripts/run_core_tests.sh
       - name: Fixture-based isolated demo
