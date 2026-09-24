@@ -4,7 +4,7 @@
 
 观澜是面向兼容 Obsidian 的 Markdown Vault、以来源证据和人工审批为核心的知识工作流。它将来源事实与 AI 派生知识候选分开：**采集 → 整理 → 审阅 → 发布 → 关系整理**。仓库包含基于夹具的本地演示；它**不是**实时 AI 生成或实时网页采集演示。
 
-这是计划作为首次公开版本 **v1** 的 GitHub 私有暂存仓库。仓库为 [`Glink-Knowledge-Base`](https://github.com/alwaysaway-dot/Glink-Knowledge-Base)，项目名称仍是 Guanlan / 观澜。目前尚未公开，也未创建 v1 Tag 或 GitHub Release；访问仓库仍需获得授权。
+GitHub 仓库为 [`Glink-Knowledge-Base`](https://github.com/alwaysaway-dot/Glink-Knowledge-Base)，项目名称仍是 Guanlan / 观澜。首次公开版本线为 **v1**，版本元数据与源码归档通过 GitHub Releases 管理。
 
 ## 已实现能力
 
