@@ -4,7 +4,7 @@
 
 Guanlan is an evidence-grounded, human-approved knowledge workflow for an Obsidian-compatible Markdown Vault. It separates source facts from AI-derived knowledge candidates: **capture → organize → review → publish → curate relations**. A fixture-based local demo is included; it is **not** a live AI generation or live web capture demonstration.
 
-This directory is a local candidate for the first public release, **v1**; it is not a published repository. The proposed GitHub repository name is `Glink知识库` (availability and owner unverified). The project remains Guanlan / 观澜. No remote clone URL exists yet.
+This is the private GitHub staging repository for the planned first public release, **v1**. The repository is [`Glink-Knowledge-Base`](https://github.com/alwaysaway-dot/Glink-Knowledge-Base); the project remains Guanlan / 观澜. It is not yet public, no v1 tag or GitHub Release has been created, and repository access currently requires authorization.
 
 ## What is implemented
 
